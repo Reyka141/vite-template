@@ -1,0 +1,32 @@
+.HorseItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: $black;
+    border-radius: $border-radius-big;
+}
+
+.horse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: left;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.selected {
+    background-color: $contrast;
+
+    & .stats > p {
+        color: $white;
+    }
+}

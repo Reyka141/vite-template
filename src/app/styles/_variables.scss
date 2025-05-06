@@ -1,0 +1,46 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
+
+// Шрифты
+$font-stack: 'Montserrat', sans-serif;
+
+// Цвета
+
+// Primary
+$contrast: #0e9755;
+$accent: #abfa03;
+$white: #fff;
+
+// Functional
+$red-1: #fa0303;
+$red-2: #970e0e;
+$red-3: #f00;
+$green-active: #00c767;
+$green: #215c3c;
+$black-active: #2b2c31;
+$black: #242328;
+$yellow: #ffe100;
+$grey: #e1e1e1;
+$bg: #1b1b1b;
+$bg-transparent: rgb(27 27 27 / 60%);
+
+// Тени
+$shadow-green: 0px 4px 5px 0px #0c7442;
+$shadow-red: 0px 4px 5px 0px #8b1212;
+
+// Размеры контейнеров
+$width-container: 440px;
+
+// Скругления для крупных форм
+$border-radius-100px: 100px;
+$border-radius-big: 12px;
+$border-radius-small: 6px;
+
+// z-index
+$z-index-negative-1: -1;
+$z-index-negative-10: -10;
+$z-index-1: 1;
+$z-index-10: 10;
+$z-index-100: 100;
+$z-index-1000: 1000;
+$z-index-10000: 10000;
+$z-index-100000: 100000;

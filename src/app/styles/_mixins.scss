@@ -1,0 +1,52 @@
+@use './variables' as *;
+
+@mixin font-large {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 78px;
+    font-family: $font-stack;
+}
+
+@mixin font-large-caps {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 46px;
+    font-family: $font-stack;
+    text-transform: uppercase;
+}
+
+@mixin font-mini-large {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+    font-family: $font-stack;
+}
+
+@mixin font-big-caps {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    font-family: $font-stack;
+    text-transform: uppercase;
+}
+
+@mixin font-big {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    font-family: $font-stack;
+}
+
+@mixin font-body {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: $font-stack;
+}
+
+@mixin font-mini {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    font-family: $font-stack;
+}

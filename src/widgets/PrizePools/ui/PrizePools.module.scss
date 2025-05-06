@@ -1,0 +1,35 @@
+.PrizePools {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: $border-radius-big;
+    background-color: $black;
+    width: 100%;
+}
+
+.title {
+    @include font-big;
+}
+
+.pools {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pool {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pool_title {
+    @include font-body;
+}
+
+.pool_amount {
+    @include font-big-caps;
+
+    color: $contrast;
+}

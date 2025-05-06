@@ -1,0 +1,12 @@
+.RaceList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

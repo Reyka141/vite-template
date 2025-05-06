@@ -1,0 +1,52 @@
+.RacePage {
+    max-width: $width-container;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.storybook_container {
+    width: $width-container;
+}
+
+// <-- Header section start -->
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 10px 12px;
+    background-image: url('@/shared/assets/backgrounds/bg_green.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: $z-index-1;
+}
+
+.header_image_left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: $z-index-negative-1;
+}
+
+.header_image_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scaleX(-1);
+    z-index: $z-index-negative-1;
+}
+
+// <-- Header section end -->
+
+// <-- Main section start -->
+
+.main {
+    padding: 24px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+// <-- Main section end -->

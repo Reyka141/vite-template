@@ -1,0 +1,50 @@
+.HistoryPage {
+    max-width: $width-container;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    background-color: $contrast;
+    padding: 20px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.main {
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        path {
+            stroke: $green-active;
+        }
+    }
+}

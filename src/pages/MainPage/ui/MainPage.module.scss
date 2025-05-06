@@ -1,0 +1,47 @@
+.MainPage {
+    max-width: $width-container;
+    margin: 0 auto;
+}
+
+// <-- Header section start -->
+
+.header {
+    background: radial-gradient(75.26% 114.58% at 100% 100%, #128b50 63.49%, #0e9755 63.5%);
+    padding: 20px;
+    position: relative;
+    z-index: $z-index-1;
+}
+
+.header_button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    z-index: $z-index-1;
+}
+
+.header_text_medium {
+    max-width: 175px;
+    margin-bottom: 15px;
+}
+
+.header_image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: $z-index-negative-1;
+}
+
+// <-- Header section end -->
+
+// <-- Main section start -->
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 10px;
+}
+
+// <-- Main section end -->

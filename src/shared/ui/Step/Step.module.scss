@@ -1,0 +1,15 @@
+.Step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step_number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: $border-radius-100px;
+    background-color: $contrast;
+}

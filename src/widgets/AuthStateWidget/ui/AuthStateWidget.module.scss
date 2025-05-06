@@ -1,0 +1,13 @@
+.AuthStateWidget {
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

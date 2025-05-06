@@ -1,0 +1,87 @@
+.Modal {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: $z-index-negative-1;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: $bg-transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    border: 1px solid $contrast;
+    border-radius: $border-radius-big;
+    padding: 20px 21px 24px;
+    background-color: $black;
+    transition: 0.3s transform;
+    transform: scale(0.5);
+    min-width: 360px;
+    max-width: 82%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opened {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: $z-index-10;
+
+    .content {
+        transform: scale(1);
+    }
+}
+
+.isClosing {
+    .content {
+        transform: scale(0.2);
+    }
+}
+
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+
+        path {
+            stroke: $green-active;
+        }
+    }
+}
+
+// Специальные стили для тестового окружения
+:global([data-loki-test]) {
+    .Modal {
+        animation: none !important;
+        transition: none !important;
+
+        .content {
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+        }
+
+        &.opened {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: var(--modal-z-index);
+
+            .content {
+                transform: scale(1);
+            }
+        }
+    }
+}

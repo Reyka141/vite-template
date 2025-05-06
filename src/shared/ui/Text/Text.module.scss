@@ -1,0 +1,63 @@
+.text {
+    color: $white;
+}
+
+.error {
+    .text {
+        color: $red-1;
+    }
+}
+
+.caps {
+    .text {
+        text-transform: uppercase;
+    }
+}
+
+.contrast {
+    .text {
+        color: $contrast;
+    }
+}
+
+.red {
+    .text {
+        color: $red-2;
+    }
+}
+
+.black {
+    .text {
+        color: $black;
+    }
+}
+
+// sizes
+
+.large {
+    @include font-large;
+}
+
+.mini-large {
+    @include font-mini-large;
+}
+
+.big-caps {
+    @include font-big-caps;
+}
+
+.big {
+    @include font-big;
+}
+
+.body {
+    @include font-body;
+}
+
+.mini {
+    @include font-mini;
+}
+
+.large-caps {
+    @include font-large-caps;
+}

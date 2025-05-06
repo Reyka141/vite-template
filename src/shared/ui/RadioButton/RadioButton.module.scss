@@ -1,0 +1,36 @@
+.RadioButton {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $green;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    background: transparent;
+
+    svg {
+        width: 0;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        border-color: $bg;
+    }
+
+    &.checked {
+        background: $accent;
+        border-color: $accent;
+
+        svg {
+            width: 18px;
+            height: 18px;
+
+            & path {
+                fill: $contrast;
+            }
+        }
+    }
+}

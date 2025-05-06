@@ -1,0 +1,47 @@
+.RaceResultPage {
+    max-width: $width-container;
+    margin: 0 auto;
+    position: relative;
+}
+
+.raceItem {
+    border-radius: 0;
+}
+
+.main {
+    padding: 24px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 8px;
+}
+
+.your_horse_position_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $border-radius-small;
+    background-color: $black;
+    gap: 6px;
+    padding: 12px 10px;
+}
+
+.your_horse_position {
+    padding: 0 9px;
+    border-radius: $border-radius-100px;
+    background-color: $white;
+}
+
+.winner {
+    background-color: $contrast;
+}
+
+.loser {
+    background-color: $red-2;
+}

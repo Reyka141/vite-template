@@ -1,0 +1,34 @@
+.RaceResultPin {
+    position: absolute;
+    padding: 4px 9px;
+    border-radius: $border-radius-big;
+}
+
+.top_right {
+    top: 12px;
+    right: 10px;
+}
+
+.center_right {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.winner {
+    box-shadow: $shadow-green;
+    background-color: $accent;
+
+    & .text {
+        color: $contrast;
+    }
+}
+
+.loser {
+    box-shadow: $shadow-red;
+    background-color: $red-1;
+}
+
+.default {
+    background-color: $black-active;
+}

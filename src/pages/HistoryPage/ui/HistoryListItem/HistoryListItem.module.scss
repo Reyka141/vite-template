@@ -1,0 +1,16 @@
+.HistoryListItem {
+    padding: 12px 10px;
+    border-radius: $border-radius-big;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: $black-active;
+}
+
+.winner {
+    background-image: url('@/shared/assets/backgrounds/bg_green.png');
+}
+
+.loser {
+    background-image: url('@/shared/assets/backgrounds/bg_red.png');
+}

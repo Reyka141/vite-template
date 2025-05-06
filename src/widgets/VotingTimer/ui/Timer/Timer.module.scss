@@ -1,0 +1,50 @@
+.Timer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 205px;
+}
+
+.primary,
+.secondary {
+    border-radius: $border-radius-big;
+    border: 1px solid $accent;
+}
+
+.primary {
+    margin-top: 11.5px;
+    padding: 20px 20px 12px;
+    position: relative;
+    min-height: 78px;
+    max-width: 175px;
+    width: 100%;
+}
+
+.primary::before {
+    @include font-mini;
+
+    content: 'free to play';
+    position: absolute;
+    top: -11.5px;
+    left: 0;
+    background-color: $accent;
+    color: $contrast;
+    padding: 4px 8px;
+    border-radius: $border-radius-100px;
+    box-shadow: $shadow-green;
+}
+
+.secondary {
+    padding: 12px 20px;
+    min-height: 70px;
+    max-width: 267px;
+    width: 100%;
+}
+
+.loading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

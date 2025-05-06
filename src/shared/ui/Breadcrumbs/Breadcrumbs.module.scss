@@ -1,0 +1,12 @@
+.Breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.separator {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $white;
+}

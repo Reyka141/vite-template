@@ -1,0 +1,41 @@
+.PrizeItem {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.text_container {
+    position: absolute;
+    bottom: -53px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px;
+    border-radius: $border-radius-big;
+    text-align: center;
+    width: 87%;
+}
+
+.text_container_winner {
+    background-color: $green;
+    border: 1px solid $accent;
+}
+
+.text_container_loser {
+    padding: 24px;
+    text-wrap: balance;
+    background-color: $black-active;
+    border: 1px solid $white;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

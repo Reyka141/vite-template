@@ -1,0 +1,20 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true,
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./config/storybook"
+        ]
+    },
+    "include": [
+        "src/**/*",
+        "config/storybook/**/*",
+        "config/storybook/global.d.ts"
+    ]
+}
