@@ -26,7 +26,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
 
             // Добавляем редьюсер только если его еще нет
             if (!hasReducer) {
-                store.reducerManager.add(nameKey, reducer);
+                store.reducerManager.add(nameKey, reducer as Reducer);
                 dispatch({ type: `@INIT ${name} reducer` });
             }
         });

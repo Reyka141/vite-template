@@ -1,0 +1,22 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Переиспользуемые компоненты и ресурсы
+
+## Shared UI
+В директории [src/shared/ui](mdc:src/shared/ui) находятся переиспользуемые UI компоненты, которые должны быть максимально абстрактными и не зависеть от бизнес-логики.
+
+## Константы и конфигурация
+- Общие константы приложения: [src/shared/const](mdc:src/shared/const)
+- Конфигурация: [src/shared/config](mdc:src/shared/config)
+
+## Библиотеки и вспомогательные функции
+Утилиты и хелперы находятся в [src/shared/lib](mdc:src/shared/lib). Это могут быть:
+- Хуки React
+- Утилитарные функции
+- Хелперы для работы с API
+
+## API
+Абстракции для работы с внешними API: [src/shared/api](mdc:src/shared/api)

@@ -1,50 +1,146 @@
-# React + TypeScript + Vite
+# Vite-App Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Шаблон React-приложения, организованный по методологии Feature-Sliced Design с использованием современного стека технологий.
 
-Currently, two official plugins are available:
+## Технологический стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Основные технологии
 
-## Expanding the ESLint configuration
+- **React** - библиотека для построения пользовательских интерфейсов
+- **TypeScript** - типизированный JavaScript
+- **Redux Toolkit** - управление состоянием
+- **React Router** - маршрутизация
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Сборка и разработка
 
-- Configure the top-level `parserOptions` property like this:
+- **Vite** - инструмент сборки и dev-сервер
+- **SCSS** - препроцессор CSS
+- **Storybook** - инструмент для разработки UI компонентов
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Тестирование
+
+- **Jest** - фреймворк для юнит-тестирования
+- **React Testing Library** - тестирование React компонентов
+- **Loki** - визуальное тестирование
+
+### Линтинг и форматирование
+
+- **ESLint** - статический анализ кода
+- **StyleLint** - линтер для CSS/SCSS
+- **Prettier** - форматирование кода
+
+### Прочие инструменты
+
+- **Axios** - HTTP-клиент для запросов к API
+- **json-server** - простой mock-сервер для разработки
+- **classnames** - библиотека для условного объединения CSS-классов
+
+## Архитектура проекта
+
+Проект организован по методологии Feature-Sliced Design (FSD) со следующими слоями:
+
+### Слои архитектуры
+
+- **app** - глобальные провайдеры, стили и точка входа в приложение
+- **pages** - компоненты уровня страниц
+- **widgets** - составные компоненты, объединяющие сущности и фичи
+- **features** - бизнес-логика, взаимодействие с пользователем
+- **entities** - бизнес-сущности
+- **shared** - переиспользуемые компоненты, хелперы, константы
+
+### Структура компонентов
+
+Каждый компонент обычно имеет следующую структуру:
+
+```
+ComponentName/
+├── ui/
+│   └── ComponentName.tsx
+├── model/
+│   ├── slices/
+│   ├── types/
+│   └── selectors/
+├── api/
+└── index.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Начало работы
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Установка зависимостей
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### Запуск в режиме разработки
+
+```bash
+npm run dev
+```
+
+### Сборка проекта
+
+```bash
+npm run build
+```
+
+## Команды
+
+- `npm run dev` - запуск dev-сервера
+- `npm run build` - сборка проекта
+- `npm run lint:ts` - проверка TypeScript файлов линтером
+- `npm run lint:ts:fix` - исправление ошибок линтера в TypeScript файлах
+- `npm run lint:scss` - проверка SCSS файлов линтером
+- `npm run lint:scss:fix` - исправление ошибок линтера в SCSS файлах
+- `npm run format` - форматирование кода с помощью Prettier
+- `npm run test:unit` - запуск юнит-тестов
+- `npm run test:ui` - запуск визуальных тестов
+- `npm run storybook` - запуск Storybook
+- `npm run storybook:build` - сборка Storybook
+
+## Конвенции кода
+
+### Импорты
+
+- Используйте абсолютные импорты с алиасом `@`
+- Пример: `import Button from '@/shared/ui/Button'`
+
+### Стили
+
+- Используйте модульные SCSS-файлы (\*.module.scss)
+- Библиотека `classnames` для условных классов
+
+### Типизация
+
+- Для типизации используйте TypeScript
+- Избегайте использования `any`
+- Типы компонентов определяйте как:
+    ```tsx
+    interface ComponentProps {
+        className?: string;
+        // другие пропсы
+    }
+    ```
+
+## Структура Shared слоя
+
+### Shared UI
+
+В директории `src/shared/ui` находятся переиспользуемые UI компоненты, которые должны быть максимально абстрактными и не зависеть от бизнес-логики.
+
+### Константы и конфигурация
+
+- Общие константы приложения: `src/shared/const`
+- Конфигурация: `src/shared/config`
+
+### Библиотеки и вспомогательные функции
+
+Утилиты и хелперы находятся в `src/shared/lib`. Это могут быть:
+
+- Хуки React
+- Утилитарные функции
+- Хелперы для работы с API
+
+### API
+
+Абстракции для работы с внешними API: `src/shared/api`

@@ -1,0 +1,28 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Рабочий процесс разработки
+
+## Команды
+Основные команды для работы с проектом определены в [package.json](mdc:package.json):
+
+- `npm run dev` - запуск dev-сервера
+- `npm run build` - сборка проекта
+- `npm run lint:ts` - проверка TypeScript файлов линтером
+- `npm run lint:scss` - проверка SCSS файлов линтером
+- `npm run test:unit` - запуск юнит-тестов
+- `npm run storybook` - запуск Storybook
+
+## Стилизация
+Для стилей используется SCSS с модульным подходом. Конфигурация стилей находится в [stylelint.config.js](mdc:stylelint.config.js).
+
+## Линтинг и форматирование
+- ESLint используется для проверки TypeScript: [eslint.config.js](mdc:eslint.config.js)
+- Prettier для форматирования кода: [.prettierrc](mdc:.prettierrc)
+
+## Тестирование
+- Jest для юнит-тестов
+- Storybook для UI-компонентов
+- Loki для визуального тестирования

@@ -1,0 +1,44 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Конвенции кода
+
+## Общие принципы
+- Код организован по методологии Feature-Sliced Design
+- TypeScript используется для типизации
+- React используется в функциональном стиле с хуками
+
+## Структура компонентов
+Каждый компонент обычно имеет следующую структуру:
+```
+ComponentName/
+├── ui/
+│   └── ComponentName.tsx
+├── model/
+│   ├── slices/
+│   ├── types/
+│   └── selectors/
+├── api/
+└── index.ts
+```
+
+## Импорты
+- Используйте абсолютные импорты с алиасом `@`
+- Пример: `import Button from '@/shared/ui/Button'`
+
+## Стили
+- Используйте модульные SCSS-файлы (*.module.scss)
+- Библиотека `classnames` для условных классов
+
+## Типизация
+- Для типизации используйте TypeScript
+- Избегайте использования `any`
+- Типы компонентов определяйте как:
+  ```tsx
+  interface ComponentProps {
+    className?: string;
+    // другие пропсы
+  }
+  ```
