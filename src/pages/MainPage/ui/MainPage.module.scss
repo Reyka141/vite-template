@@ -10,6 +10,14 @@
     padding: 20px;
     position: relative;
     z-index: $z-index-1;
+    color: white;
+    border-radius: 0 0 12px 12px;
+}
+
+.header_title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .header_button {
@@ -18,11 +26,24 @@
     top: 0;
     padding: 10px;
     z-index: $z-index-1;
+    background-color: white;
+    color: #128b50;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 15px;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
 }
 
 .header_text_medium {
-    max-width: 175px;
     margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 .header_image {
@@ -31,6 +52,7 @@
     bottom: 0;
     display: flex;
     z-index: $z-index-negative-1;
+    max-width: 150px;
 }
 
 // <-- Header section end -->
@@ -42,6 +64,74 @@
     flex-direction: column;
     gap: 12px;
     padding: 12px 10px;
+}
+
+.main_card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        font-size: 16px;
+    }
+}
+
+.main_features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    p {
+        color: #666;
+        font-size: 16px;
+    }
+}
+
+.feature_item {
+    flex: 1;
+    min-width: 100px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    p {
+        margin-top: 8px;
+        font-size: 14px;
+    }
+}
+
+.feature_icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.main_action_button {
+    background-color: #128b50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+
+    &:hover {
+        background-color: #0e9755;
+    }
 }
 
 // <-- Main section end -->
