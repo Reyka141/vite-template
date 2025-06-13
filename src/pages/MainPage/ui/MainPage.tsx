@@ -12,7 +12,7 @@ const MainPage = (props: MainPageProps) => {
         <div className={cn(styles.MainPage, className)}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h1 className={styles.header_title}>Добро пожаловать!</h1>
+                    <h1 className={styles.header_title}>Добро пожаловать!!!!</h1>
                     <p className={styles.header_text_medium}>Мы рады приветствовать вас на нашей платформе</p>
                     <button className={styles.header_button}>Начать</button>
                 </div>
